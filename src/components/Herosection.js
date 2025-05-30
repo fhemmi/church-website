@@ -2,20 +2,17 @@
 
 
 
-
 import React, { useState, useEffect } from 'react';
 import '../pages/Home.css';
 // import '../components/Herosection.css'
 
+const messages = [
+  'Welcome to True Church',
+  'You Are Blessed',
+  'We Love to Have You',
+];
 
-  const messages = [
-    'Welcome to True Church',
-    'You Are Blessed',
-    'We Love to Have You',
-  ];
-
-  const HeroSection = () => {
-
+const HeroSection = () => {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -27,10 +24,7 @@ import '../pages/Home.css';
       return;
     }
 
-    if (
-      subIndex === messages[index].length + 1 &&
-      !deleting
-    ) {
+    if (subIndex === messages[index].length + 1 && !deleting) {
       setTimeout(() => setDeleting(true), 1000);
       return;
     }
@@ -42,14 +36,12 @@ import '../pages/Home.css';
     }
 
     const timeout = setTimeout(() => {
-      setSubIndex(prev =>
-        deleting ? prev - 1 : prev + 1
-      );
+      setSubIndex(prev => (deleting ? prev - 1 : prev + 1));
       setText(messages[index].substring(0, subIndex));
     }, deleting ? 60 : 100);
 
     return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting, messages]) ;
+  }, [subIndex, index, deleting]); // ✅ removed 'messages'
 
   return (
     <section className="hero-section">

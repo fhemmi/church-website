@@ -7,12 +7,14 @@ import React, { useState, useEffect } from 'react';
 import '../pages/Home.css';
 // import '../components/Herosection.css'
 
-const HeroSection = () => {
+
   const messages = [
     'Welcome to True Church',
     'You Are Blessed',
     'We Love to Have You',
   ];
+
+  const HeroSection = () => {
 
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
@@ -47,7 +49,7 @@ const HeroSection = () => {
     }, deleting ? 60 : 100);
 
     return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting]) ;
+  }, [subIndex, index, deleting, messages]) ;
 
   return (
     <section className="hero-section">

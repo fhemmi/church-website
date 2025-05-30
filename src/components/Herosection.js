@@ -1,41 +1,6 @@
 
 
 
-// import React from 'react';
-// import Typewriter from 'typewriter-effect';
-// import '../pages/Home.css';
-
-// const HeroSection = () => {
-//   return (
-//     <section className="hero-section">
-//       <div className="hero-content animate-fade-slide">
-//         <h1 >Welcome to True Church</h1>
-
-//         <div className="typewriter-text p-3 fst-italic">
-//           <Typewriter
-//             options={{
-//               strings: [
-//                 'Where faith, family, and purpose come together.',
-//                 'You are Blessed.',
-//                 'We Love to Have You.',
-//                 'Join Us in Worship.',
-//               ],
-//               autoStart: true,
-//               loop: true,
-//               delay: 50,
-//             }}
-//           />
-//         </div>
-
-//         <button>Join Us This Sunday</button>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
-
-
 
 
 import React, { useState, useEffect } from 'react';
@@ -82,7 +47,7 @@ const HeroSection = () => {
     }, deleting ? 60 : 100);
 
     return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting]);
+  }, [subIndex, index, deleting]) ;
 
   return (
     <section className="hero-section">

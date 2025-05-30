@@ -194,10 +194,12 @@ const Footer = () => {
           <div className="footer-col">
             <h4 className="footer-title text-white">Follow Us</h4>
             <div className="social-links">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-tiktok"></i></a>
+              <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
+             
+
+              <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
+              <a href="https://x.com"><i className="fab fa-twitter"></i></a>
+              <a href="https://tiktok.com"><i className="fab fa-tiktok"></i></a>
             </div>
           </div>
         </div>

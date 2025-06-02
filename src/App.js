@@ -74,6 +74,8 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import NotFound from './pages/Notfound'; // ✅ added this
 import PhotoGallery from './components/Photogallery'; // adjust path as needed
+// import './App.css';
+// import './index.css'
 
 
 

@@ -114,6 +114,9 @@ import './Footer.css';
 import logo from '../assets/images/logo.png';
 import { collection, addDoc } from 'firebase/firestore';
 import db from '../firebase'; // Make sure this path is correct
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faTiktok,} from '@fortawesome/free-brands-svg-icons';
+// import '../index.css'
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -150,7 +153,7 @@ const Footer = () => {
     <>
       <footer className="custom-footer">
         <div className="footer-content">
-          <h2 className="footer-title">TRUE CHURCH</h2>
+          <h2 className="footer-title"> CHURCH</h2>
           <p className="footer-description">
             A place of worship, community, and purpose. Join us in spreading love, faith, and unity. Suscribe to our News letter
           </p>
@@ -175,7 +178,7 @@ const Footer = () => {
           <div className="social-icons">
             <div className="logo-section">
               <img src={logo} alt="True Church Logo" />
-              <h1 className="text-white">TRUE CHURCH</h1>
+              <h1 className="text-white"> CHURCH</h1>
             </div>
           </div>
 
@@ -193,14 +196,21 @@ const Footer = () => {
 
           <div className="footer-col">
             <h4 className="footer-title text-white">Follow Us</h4>
-            <div className="social-links">
-              <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
-             
+           <div className="social-links">
+  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faFacebook} />
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faInstagram} />
+  </a>
+  <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faTwitter} />
+  </a>
+  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faTiktok} />
+  </a>
+</div>
 
-              <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
-              <a href="https://x.com"><i className="fab fa-twitter"></i></a>
-              <a href="https://tiktok.com"><i className="fab fa-tiktok"></i></a>
-            </div>
           </div>
         </div>
 

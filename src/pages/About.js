@@ -5,8 +5,30 @@
 import React from 'react';
 import './About.css';
 import useInView from '../hooks/Useinview';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+
+
+
+
 
 const About = () => {
+
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const targetId = location.hash.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // small delay ensures it works after navigation
+    }
+  }
+}, [location]);
 
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
@@ -66,7 +88,7 @@ const About = () => {
       {/* Leadership Section */}
       <section className="section-alt">
         <div className="container">
-          <h2 className="section-heading">Meet Our Pastors</h2>
+          <h2 className="section-heading"  id='leadership'>Meet Our Pastors</h2>
           <div className="grid-2 leader-cards">
             <div className="leader-card">
               <img src="https://images.unsplash.com/photo-1587143987442-ae0cc2508c31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdG9yfGVufDB8fDB8fHww" alt="Pastor Sarah Johnson" />

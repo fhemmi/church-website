@@ -1,117 +1,3 @@
-/* About.css
-
-.about-wrapper {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background-color: #fff;
-  padding-top: 60px;
-}
-
-.about-hero {
-  background: url('../assets/images/abouthero.jpeg') center/cover no-repeat;
-  text-align: center;
-  padding: 80px 20px;
-  color: white;
-}
-
-.about-hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.about-hero-content .subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-.section,
-.section-alt {
-  padding: 60px 20px;
-}
-
-.section-alt {
-  background-color: #f8f9fa;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section-heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.section-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-.grid-2,
-.grid-4 {
-  display: grid;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.box-heading {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.box-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.leader-section img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.leader-card h4 {
-  font-size: 1.1rem;
-  margin: 10px 0 5px;
-  font-weight: 500;
-}
-
-.leader-card p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.value-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.value-card p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-.text-center {
-  text-align: center;
-} */
 
 
 
@@ -146,12 +32,7 @@
   color: #2d2d2d;
 }
 
-.section-text {
-  font-size: 1.1rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
+
 
 /* Hero Section */
 .about-hero {
@@ -242,7 +123,7 @@
 
 .leader-card p {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Values Section */
@@ -261,7 +142,7 @@
 }
 
 .value-card p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
 }
 

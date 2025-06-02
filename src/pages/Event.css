@@ -188,7 +188,7 @@
 }
 
 .event-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #2c3e50;
   margin-bottom: 0.5rem;
   font-weight: 600;
@@ -203,7 +203,7 @@
 }
 
 .event-info p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
 }
 
@@ -223,8 +223,8 @@
   }
 
   .event-card {
-    width: 100%;
-    max-width: 90%;
+    /* width: 100%; */
+    max-width: 100%;
   }
 }
 

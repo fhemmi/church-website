@@ -87,8 +87,30 @@
 import React from 'react';
 import SermonCard from '../components/Sermoncard';
 import './Sermons.css';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+
+
+
+
+
 
 const Sermons = () => {
+
+    const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const targetId = location.hash.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // small delay ensures it works after navigation
+    }
+  }
+}, [location]);
   const sermons = [
     {
       title: "Faith Over Fear",
@@ -111,7 +133,7 @@ const Sermons = () => {
   ];
 
   return (
-    <div className="sermons-page">
+    <div className="sermons-page" id='sermon'> 
       {/* Hero Section */}
       <section className="sermon-hero">
         <div className="overlay">

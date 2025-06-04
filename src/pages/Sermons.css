@@ -139,24 +139,35 @@
 
 
 .sermon-hero {
-  background-image: url('https://images.unsplash.com/photo-1484910292437-025e5d13ce87?auto=format&fit=crop&w=1600&q=80');
+  /* background-image: url('https://images.unsplash.com/photo-1484910292437-025e5d13ce87?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
   height: 50vh;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; */
 
-.sermon-hero .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
+    height: 70vh; /* Full screen height */
+  background: url('https://images.unsplash.com/photo-1511142747855-3f3ebbd3bd90?w=1200') center/cover no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
   text-align: center;
+}
+
+.sermon-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 75, 140, 0.6); /* Deep blue transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sermon-hero .hero-content {
@@ -179,6 +190,35 @@
 .sermon-card h3 {
   font-size: 1.5rem;
   margin-top: 10px;
+}
+
+
+
+
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {

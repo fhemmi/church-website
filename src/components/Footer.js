@@ -62,9 +62,9 @@ const location = useLocation();
 
   const handleCloseSuccess = () => setSuccess(false);
 
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-   const closeMenu = () => setIsOpen(false);
+  //  const closeMenu = () => setIsOpen(false);
 
   return (
     <>

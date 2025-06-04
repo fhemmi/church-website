@@ -5,9 +5,10 @@
 import React, { useState, useEffect } from 'react';
 import '../pages/Home.css';
 // import '../components/Herosection.css'
+// import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const messages = [
-  'Welcome to True Church',
+  'Welcome to Faith Church',
   'You Are Blessed',
   'We Love to Have You',
 ];
@@ -44,7 +45,7 @@ const HeroSection = () => {
   }, [subIndex, index, deleting]); // ✅ removed 'messages'
 
   return (
-    <section className="hero-section">
+    <section className="hero-section  fade-in-up">
       <div className="overlay" />
       <div className="hero-content">
         <h1 className="typewriter-text">{text}</h1>

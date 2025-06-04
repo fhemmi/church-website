@@ -1,69 +1,16 @@
 
 
-
-
-
-// import React from 'react';
-// import './Contact.css';
-
-// const Contact = () => {
-//   return (
-//     <div className="contact-page">
-//       {/* Hero Section */}
-//       <section className="contact-hero">
-//         <div className="hero-content">
-//           <h1>Contact Faith Church</h1>
-//           <p>We'd love to hear from you. Whether you're visiting or reaching out, we're here for you.</p>
-//         </div>
-//       </section>
-
-//       {/* Contact Section */}
-//       <section className="contact-section">
-//         <div className="container contact-grid">
-//           {/* Contact Form */}
-//           <div className="contact-form">
-//             <h2>Send Us a Message</h2>
-//             <form>
-//               <input type="text" placeholder="Full Name" required />
-//               <input type="email" placeholder="Email Address" required />
-//               <textarea placeholder="Your Message" rows="6" required></textarea>
-//               <button type="submit">Send Message</button>
-//             </form>
-//           </div>
-
-//           {/* Contact Info */}
-//           <div className="contact-info">
-//             <h2>Visit or Reach Out</h2>
-//             <p><strong>Address:</strong> 123 Faith Lane, Hope City</p>
-//             <p><strong>Email:</strong> info@faithchurch.org</p>
-//             <p><strong>Phone:</strong> +1 (234) 567-8901</p>
-//             <p><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
-//           </div>
-//         </div>
-
-//         {/* Map Section Below Info */}
-//         <div className="map-section">
-//           <h3 className="map-heading">View Our Location on the Map</h3>
-//           <iframe
-//             title="Faith Church Location"
-//             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0195595040265!2d-122.41941518468373!3d37.77492977975933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b72a7e7fd%3A0xb5c9f40c4e6dc7e2!2sYour%20Church%20Location!5e0!3m2!1sen!2sus!4v1716048417555"
-//             allowFullScreen=""
-//             loading="lazy"
-//           ></iframe>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default Contact;
-
 import React, { useState } from 'react';
 import './Contact.css';
 import db from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Contact = () => {
+
+  
+    useScrollAnimation(); // initialize scroll animations
+    
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -102,7 +49,7 @@ const Contact = () => {
   return (
     <div className="contact-page">
       {/* Hero Section */}
-      <section className="contact-hero">
+      <section className="contact-hero fade-in-up">
         <div className="hero-content">
           <h1>Contact Faith Church</h1>
           <p>We'd love to hear from you. Whether you're visiting or reaching out, we're here for you.</p>
@@ -110,7 +57,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="contact-section">
+      <section className="contact-section fade-in-up">
         <div className="container contact-grid">
           {/* Contact Form or Success Message */}
           <div className="contact-form">

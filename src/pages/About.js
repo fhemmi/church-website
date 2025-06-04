@@ -1,44 +1,30 @@
-
-
-
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css';
-import useInView from '../hooks/Useinview';
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-
-
-
-
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const About = () => {
-
-
   const location = useLocation();
 
-useEffect(() => {
-  if (location.hash) {
-    const targetId = location.hash.replace('#', '');
-    const element = document.getElementById(targetId);
-    if (element) {
-      setTimeout(() => {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }, 100); // small delay ensures it works after navigation
+  useScrollAnimation(); // initialize scroll animations
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
     }
-  }
-}, [location]);
-
-  const [ref, isInView] = useInView({ threshold: 0.1 });
-
+  }, [location]);
 
   return (
     <div className="about-wrapper">
 
       {/* Hero Section */}
-      {/* <section className="about-hero"> */}
-      <section ref={ref} className={`about-hero ${isInView ? 'animate-fade-up' : ''}`}>
+      <section className="about-hero fade-in-up">
         <div className="about-hero-overlay">
           <div className="about-hero-content">
             <h1 className="section-title">Welcome to Faith Church</h1>
@@ -48,7 +34,7 @@ useEffect(() => {
       </section>
 
       {/* Welcome Section */}
-      <section className="section welcome">
+      <section className="section welcome fade-in-up">
         <div className="container">
           <h2 className="section-heading">A Place to Belong</h2>
           <p className="section-text">
@@ -58,7 +44,7 @@ useEffect(() => {
       </section>
 
       {/* Mission and Vision */}
-      <section className="section-alt mission-vision">
+      <section className="section-alt mission-vision fade-in-up">
         <div className="container grid-2">
           <div className="card">
             <h3>Our Mission</h3>
@@ -76,7 +62,7 @@ useEffect(() => {
       </section>
 
       {/* Church Story */}
-      <section className="section">
+      <section className="section fade-in-up">
         <div className="container">
           <h2 className="section-heading">Our Story</h2>
           <p className="section-text">
@@ -86,18 +72,17 @@ useEffect(() => {
       </section>
 
       {/* Leadership Section */}
-      <section className="section-alt">
+      <section className="section-alt fade-in-up">
         <div className="container">
-          <h2 className="section-heading"  id='leadership'>Meet Our Pastors</h2>
+          <h2 className="section-heading" id="leadership">Meet Our Pastors</h2>
           <div className="grid-2 leader-cards">
             <div className="leader-card">
-              <img src="https://images.unsplash.com/photo-1587143987442-ae0cc2508c31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdG9yfGVufDB8fDB8fHww" alt="Pastor Sarah Johnson" />
-             <h4>Pastor Emmanuel Johnson</h4>
+              <img src="https://images.unsplash.com/photo-1587143987442-ae0cc2508c31?w=500&auto=format&fit=crop&q=60" alt="Pastor Emmanuel Johnson" />
+              <h4>Pastor Emmanuel Johnson</h4>
               <p>Senior Pastor</p>
             </div>
             <div className="leader-card">
-              {/* <img src='../assets/images/usebg.webp' /> */}
-              <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Pastor Emmanuel Johnson" />
+              <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Pastor Sarah Johnson" />
               <h4>Pastor Sarah Johnson</h4>
               <p>Worship & Family Life Pastor</p>
             </div>
@@ -106,7 +91,7 @@ useEffect(() => {
       </section>
 
       {/* Values */}
-      <section className="section values">
+      <section className="section values fade-in-up">
         <div className="container">
           <h2 className="section-heading">Our Core Values</h2>
           <div className="grid-4">
@@ -126,7 +111,7 @@ useEffect(() => {
       </section>
 
       {/* Call to Worship */}
-      <section className="section call-to-worship text-center">
+      <section className="section call-to-worship text-center fade-in-up">
         <div className="container">
           <h2 className="section-heading">Join Us This Sunday</h2>
           <p className="section-text">
@@ -140,8 +125,3 @@ useEffect(() => {
 };
 
 export default About;
-
-
-
-
-

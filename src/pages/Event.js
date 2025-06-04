@@ -3,6 +3,7 @@ import React from 'react';
 import './Event.css';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 
 
@@ -36,7 +37,8 @@ const events = [
 ];
 
 const Events = () => {
-
+ 
+   useScrollAnimation(); // initialize scroll animations
   
     const location = useLocation();
   
@@ -54,14 +56,14 @@ const Events = () => {
 
   return (
     <div className="events-wrapper" id='events'>
-      <section className="events-hero">
+      <section className="events-hero fade-in-up">
         <div className="overlay">
           <h1>Upcoming Events at Faith Church</h1>
           <p>Be part of our growing community and experience God in every gathering.</p>
         </div>
       </section>
 
-      <section className="events-section">
+      <section className="events-section  fade-in-up">
         <div className="container">
           <h2 className="section-heading">Don’t Miss Out</h2>
           <div className="event-grid">
